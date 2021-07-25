@@ -1,0 +1,158 @@
+.typewriter h1 {
+  font-size: clamp(2rem, 3vw, 4rem);
+  position: relative;
+  font-family: "Source Code Pro", monospace;
+  position: relative;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.typewriter h1::after {
+  content: "";
+  border-right: .15em solid white;
+  -webkit-animation: blink 750ms infinite alternate;
+          animation: blink 750ms infinite alternate;
+}
+
+@-webkit-keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(3rem);
+            transform: translateY(3rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(3rem);
+            transform: translateY(3rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes rotateBlurIn {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-filter: invert(27%) sepia(51%) saturate(2818%) hue-rotate(270deg) brightness(104%) contrast(97%);
+            filter: invert(27%) sepia(51%) saturate(2818%) hue-rotate(270deg) brightness(104%) contrast(97%);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateBlurIn {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-filter: invert(27%) sepia(51%) saturate(2818%) hue-rotate(270deg) brightness(104%) contrast(97%);
+            filter: invert(27%) sepia(51%) saturate(2818%) hue-rotate(270deg) brightness(104%) contrast(97%);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes rotateBlurOut {
+  0% {
+    -webkit-filter: invert(27%) sepia(51%) saturate(2818%) hue-rotate(270deg) brightness(104%) contrast(97%);
+            filter: invert(27%) sepia(51%) saturate(2818%) hue-rotate(270deg) brightness(104%) contrast(97%);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes rotateBlurOut {
+  0% {
+    -webkit-filter: invert(27%) sepia(51%) saturate(2818%) hue-rotate(270deg) brightness(104%) contrast(97%);
+            filter: invert(27%) sepia(51%) saturate(2818%) hue-rotate(270deg) brightness(104%) contrast(97%);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+body {
+  color: white;
+  margin: 0;
+  font-family: "Source Sans Pro", sans-serif;
+  min-height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #1d193b), to(#7b0ac8));
+  background: linear-gradient(90deg, #1d193b 50%, #7b0ac8 100%);
+}
+
+.subtitle {
+  font-size: 1rem;
+  font-weight: 400;
+  padding-bottom: 1rem;
+  opacity: 0;
+  -webkit-animation: fadeInUp 2s ease 6s;
+          animation: fadeInUp 2s ease 6s;
+}
+
+.github-logo {
+  border-radius: 100%;
+  -webkit-box-shadow: 0px 0px 10px 10px black;
+          box-shadow: 0px 0px 10px 10px black;
+  width: 100px;
+  height: 100px;
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+  opacity: 0;
+  -webkit-animation: fadeInUp 2s ease 6s;
+          animation: fadeInUp 2s ease 6s;
+}
+
+.after-anim {
+  -webkit-animation: none;
+          animation: none;
+  opacity: 1;
+}
+
+.after-anim.github-logo.mouseOutGithub {
+  -webkit-animation: rotateBlurOut 700ms;
+          animation: rotateBlurOut 700ms;
+}
+
+.after-anim.github-logo:hover {
+  -webkit-animation: rotateBlurIn 700ms forwards;
+          animation: rotateBlurIn 700ms forwards;
+}
+/*# sourceMappingURL=style.css.map */

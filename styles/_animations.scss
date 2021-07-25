@@ -1,0 +1,52 @@
+  // MIXIN ZONE
+
+  @mixin fadeInUp {
+    opacity: 0;
+    animation: fadeInUp 2s ease 6s;
+  }
+
+  @mixin pinkFilter {
+    filter: invert(27%) sepia(51%) saturate(2818%) hue-rotate(270deg) brightness(104%) contrast(97%);
+  }
+
+// ANIMATIONS ZONE
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+  // to {
+  //   background: transparent;
+  // }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes rotateBlurIn {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    @include pinkFilter();
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateBlurOut {
+  0% {
+    @include pinkFilter();
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}

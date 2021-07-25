@@ -1,0 +1,43 @@
+@import "typewriter";
+@import "variables";
+@import "animations";
+
+  body {
+    color: white;
+    margin: 0;
+    font-family: "Source Sans Pro", sans-serif;
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    background: $bgColor;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    font-weight: 400;
+    padding-bottom: 1rem;
+    @include fadeInUp()
+  }
+
+  .github-logo {
+    border-radius: 100%;
+    box-shadow: 0px 0px 10px 10px black;
+    width: 100px;
+    height: 100px;
+    filter: invert(100%);
+    @include fadeInUp();
+  }
+
+  .after-anim {
+    animation: none;
+    opacity: 1;
+  }
+
+  .after-anim.github-logo.mouseOutGithub {
+    animation: rotateBlurOut 700ms;
+  }
+
+  .after-anim.github-logo:hover {
+    animation: rotateBlurIn 700ms forwards;
+  }
