@@ -1,37 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap");
 .typewriter {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .typewriter h1 {
-  position: fixed;
   font-size: clamp(3rem, 3vw, 5rem);
   font-family: "Montserrat", monospace;
-  padding-bottom: 5rem;
-  width: -webkit-max-content;
-  width: -moz-max-content;
   width: max-content;
 }
 
 .typewriter h1::after {
   content: "";
   border-right: .15em solid white;
-  -webkit-animation: blink 750ms infinite alternate;
-          animation: blink 750ms infinite alternate;
-}
-
-@-webkit-keyframes blink {
-  50% {
-    border-color: transparent;
-  }
+  animation: blink 750ms infinite alternate;
 }
 
 @keyframes blink {
@@ -40,81 +23,34 @@
   }
 }
 
-@-webkit-keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(3rem);
-            transform: translateY(3rem);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
-
 @keyframes fadeInUp {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(3rem);
-            transform: translateY(3rem);
+    transform: translateY(3rem);
   }
   100% {
     opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
-
-@-webkit-keyframes rotateBlurIn {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-filter: invert(27%) sepia(51%) saturate(2818%) hue-rotate(270deg) brightness(104%) contrast(97%);
-            filter: invert(27%) sepia(51%) saturate(2818%) hue-rotate(270deg) brightness(104%) contrast(97%);
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: translateY(0);
   }
 }
 
 @keyframes rotateBlurIn {
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   100% {
-    -webkit-filter: invert(27%) sepia(51%) saturate(2818%) hue-rotate(270deg) brightness(104%) contrast(97%);
-            filter: invert(27%) sepia(51%) saturate(2818%) hue-rotate(270deg) brightness(104%) contrast(97%);
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-@-webkit-keyframes rotateBlurOut {
-  0% {
-    -webkit-filter: invert(27%) sepia(51%) saturate(2818%) hue-rotate(270deg) brightness(104%) contrast(97%);
-            filter: invert(27%) sepia(51%) saturate(2818%) hue-rotate(270deg) brightness(104%) contrast(97%);
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-  100% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    filter: invert(27%) sepia(51%) saturate(2818%) hue-rotate(270deg) brightness(104%) contrast(97%);
+    transform: rotate(360deg);
   }
 }
 
 @keyframes rotateBlurOut {
   0% {
-    -webkit-filter: invert(27%) sepia(51%) saturate(2818%) hue-rotate(270deg) brightness(104%) contrast(97%);
-            filter: invert(27%) sepia(51%) saturate(2818%) hue-rotate(270deg) brightness(104%) contrast(97%);
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    filter: invert(27%) sepia(51%) saturate(2818%) hue-rotate(270deg) brightness(104%) contrast(97%);
+    transform: rotate(360deg);
   }
   100% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
 }
 
@@ -123,57 +59,50 @@ body {
   margin: 0;
   font-family: "Montserrat", sans-serif;
   min-height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #1d193b), to(#7b0ac8));
   background: linear-gradient(90deg, #1d193b 50%, #7b0ac8 100%);
 }
 
 .subtitle {
   font-size: 1.6rem;
   font-weight: 400;
-  padding-bottom: 1rem;
   opacity: 0;
-  -webkit-animation: fadeInUp 2s ease 6s;
-          animation: fadeInUp 2s ease 6s;
+  animation: fadeInUp 2s ease 6s;
+  padding: 0 0 2.5rem 0;
+  margin: 0;
 }
 
 .github-logo {
-  border-radius: 100%;
-  -webkit-box-shadow: 0px 0px 10px 10px black;
-          box-shadow: 0px 0px 10px 10px black;
-  max-width: 70%;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px 10px black;
+  max-width: 50vw;
   max-height: 50vh;
-  width: auto;
-  height: auto;
-  -webkit-filter: invert(100%);
-          filter: invert(100%);
+  width: 170px;
+  height: 170px;
+  filter: invert(100%);
   opacity: 0;
-  -webkit-animation: fadeInUp 2s ease 6s;
-          animation: fadeInUp 2s ease 6s;
+  animation: fadeInUp 2s ease 6s;
 }
 
 .after-anim {
-  -webkit-animation: none;
-          animation: none;
+  animation: none;
   opacity: 1;
 }
 
 .after-anim.github-logo.mouseOutGithub {
-  -webkit-animation: rotateBlurOut 700ms;
-          animation: rotateBlurOut 700ms;
+  animation: rotateBlurOut 700ms;
 }
 
 .after-anim.github-logo:hover {
-  -webkit-animation: rotateBlurIn 700ms forwards;
-          animation: rotateBlurIn 700ms forwards;
+  animation: rotateBlurIn 700ms forwards;
 }
-/*# sourceMappingURL=style.css.map */
+
+@media only screen and (max-width: 800px) {
+  .github-logo {
+    width: 130px;
+    height: 130px;
+  }
+}
